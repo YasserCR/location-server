@@ -47,6 +47,11 @@ exports.deleteLocationById = async (req, res) => {
     }
 }
 
+/**
+ * Aunque lo común es no mostrar el recurso actualizado, se decidio mostrarlo para
+ * poder verlo desde el lado del cliente, si no se desea ese
+ * comportamiento se puede cambiar por res.status(204)
+ */
 exports.updateLocationById = async (req, res) => {
     try {
         const location = await locationService.updateLocationById(req.params.id, req.body)
@@ -55,7 +60,7 @@ exports.updateLocationById = async (req, res) => {
         } else {
             res.status(404).send({ error: 'Location not found' })
         }
-    } catch {
+    } catch (err) {
         res.status(500).send({ error: err.message })
     }
 }
