@@ -28,7 +28,7 @@ jobs:
                 script: |
                     export NVM.DIR=~/.nvm
                     source ~/.nvm/nvm.sh
-                    cd /var/www/locations-server/
+                    cd /var/www/location-server/
                     git pull origin main
                     npm install --production
                     pm2 restart src/index.js
