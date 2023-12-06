@@ -5,11 +5,11 @@
 Para clonar el repositorio, puedes usar el siguiente comando:
 
 ```bash
-git clone https://github.com/YasserCR/YasserCR.git
+git clone https://github.com/YasserCR/location-server.git
 ```
 
-## Correr el código
-Para correr el código, primero necesitas instalar las dependencias. Puedes hacerlo con el siguiente comando:
+## Ejecutar el servidor
+Para ejecutar el servidor, primero necesitas instalar las dependencias. Puedes hacerlo con el siguiente comando:
 
 ```bash
 npm install
@@ -26,6 +26,11 @@ npm run dev
 Se ocupa una base de datos de MongoDB, el url que se necesita está
 en el archivo `.env.example`, hace falta renombrarlo a `.env` y colocar el puerto deseado y la url hacia nuestra base de datos en 
 MongoDB.
+
+Se puede consultar la documentación de la API realizada con OpenAPI en la siguiente url:
+* Para la versión desplegada: https://theplaces.online/docs
+* Por si se ejecuta en un entorno local: http://localhost:3000/docs
+
 
 ## Requisitos
 
